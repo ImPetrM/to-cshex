@@ -91,6 +91,9 @@ byte[] data =
 * preparing payloads for networking
 * writing unit tests with byte arrays
 
+## Notes
+* Output uses little-endian byte order (same as .NET on most platforms).
+
 ## Build
 
 ```
