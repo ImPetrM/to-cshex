@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "to-cshex", "to-cshex\to-cshex.csproj", "{D9B1852A-BFB6-4122-8759-4735DC390269}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{42BDF924-96FF-4633-B47E-ABB9199F564C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "to-cshex", "src\to-cshex\to-cshex.csproj", "{D9B1852A-BFB6-4122-8759-4735DC390269}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,6 +14,5 @@ Global
 		{D9B1852A-BFB6-4122-8759-4735DC390269}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{D9B1852A-BFB6-4122-8759-4735DC390269} = {42BDF924-96FF-4633-B47E-ABB9199F564C}
 	EndGlobalSection
 EndGlobal
