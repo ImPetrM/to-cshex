@@ -67,7 +67,7 @@ class Program
         var convertor = new CsHexConvertor();
         if (!convertor.IsSupportedType(valueType))
         {
-            Console.WriteLine($"Error: Unsupported value type '{valueType}'. Supported types are: int, uint, short, ushort, byte, long, double, float, string.");
+            Console.WriteLine($"Error: Unsupported value type '{valueType}'. Supported types are: int, uint, short, ushort, byte, long, double, float, string, bool.");
             return;
         }
         
