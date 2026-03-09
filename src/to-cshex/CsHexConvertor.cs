@@ -17,6 +17,7 @@ public class CsHexConvertor
             ["double"] = (raw => BitConverter.GetBytes(double.Parse(raw))),
             ["float"] = (raw => BitConverter.GetBytes(float.Parse(raw))),
             ["string"] = (raw => System.Text.Encoding.UTF8.GetBytes(raw)),
+            ["bool"] = (raw => BitConverter.GetBytes(bool.Parse(raw))),
         };
     }
     
