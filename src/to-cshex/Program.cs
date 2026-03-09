@@ -79,6 +79,7 @@ class Program
             if (verbose)
             {
                 Console.WriteLine($"Value: ({valueType.ToLowerInvariant()}) {rawValue}");
+                Console.WriteLine($"Size: {convertedValue.Length} bytes");
                 Console.WriteLine($"Converted Value (byte array): [{output}]");
             }
             else
