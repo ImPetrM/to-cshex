@@ -8,12 +8,14 @@ public class CsHexConvertor
     {
         _converters = new Dictionary<string, Func<string, byte[]>>(StringComparer.OrdinalIgnoreCase)
         {
+            ["long"] = (raw => BitConverter.GetBytes(long.Parse(raw))),
+            ["ulong"] = (raw => BitConverter.GetBytes(ulong.Parse(raw))),
             ["int"] = (raw => BitConverter.GetBytes(int.Parse(raw))),
             ["uint"] = (raw => BitConverter.GetBytes(uint.Parse(raw))),
             ["short"] = (raw => BitConverter.GetBytes(short.Parse(raw))),
             ["ushort"] = (raw => BitConverter.GetBytes(ushort.Parse(raw))),
             ["byte"] = (raw => [byte.Parse(raw)]),
-            ["long"] = (raw => BitConverter.GetBytes(long.Parse(raw))),
+            ["char"] = (raw => BitConverter.GetBytes(char.Parse(raw))),
             ["double"] = (raw => BitConverter.GetBytes(double.Parse(raw))),
             ["float"] = (raw => BitConverter.GetBytes(float.Parse(raw))),
             ["string"] = (raw => System.Text.Encoding.UTF8.GetBytes(raw)),
@@ -22,6 +24,8 @@ public class CsHexConvertor
     }
     
     public bool IsSupportedType(string type) => _converters.ContainsKey(type);
+    
+    public IReadOnlyCollection<string> GetSupportedTypes() => _converters.Keys;
     
     public bool TryConvert(string type, string rawValue, out byte[] convertedValue)
     {
