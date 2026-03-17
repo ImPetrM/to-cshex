@@ -46,6 +46,7 @@ Examples:
 "Hello"
 3.14
 true
+A
 ```
 
 `valueType`
@@ -54,12 +55,14 @@ Specifies how the raw value is interpreted before conversion.
 Supported types:
 
 ```
+long
+ulong
 int
 uint
 short
 ushort
 byte
-long
+char
 double
 float
 string
